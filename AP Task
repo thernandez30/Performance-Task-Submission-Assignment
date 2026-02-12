@@ -1,1 +1,70 @@
 
+# def bakery_options(name, bakery_list, options, *args):
+#     if not bakery_options:
+#         return "None of those exist, sorry."
+    
+names = []
+my_list = []
+
+def bakery_info():
+    bakery_options = int(input("What would you like to order today? Enter 1-4.\n1.) 4 cookies\n2.) 2 cinnamon rolls\n3.) 4 Macarons\n4.) 1 Pastry of the day\n"))
+
+    if bakery_options == 1:
+            cookies = int(input("You chose cookies! Choose a flavor 1-2. \n 1.) Macadamia nut \n 2.) Chocolate chip\n"))
+            if cookies == 1:
+                print("You chose macadamia nut cookies! The cost is (....).")
+                print("-" * 30)
+            elif cookies == 2:
+                print("You chose chocolate chip cookies! The cost is (...).")
+                print("-" * 30)
+            else:
+                print("That's not an option! Try again.\n")
+
+    elif bakery_options == 2:
+        print("You chose cinnamon rolls! The cost is (....).")
+        print("-" * 30)
+
+    elif bakery_options == 3:
+        macarons = int(input("You chose macarons! Choose a flavor 1-3. \n 1.) Pistachio\n 2.) Lemon\n 3.) Raspberry\n"))
+        if macarons == 1:
+            print("You chose pistachio macarons! The cost is (....).")
+            print("-" * 30)
+        elif macarons == 2:
+            print("You chose lemon macarons! The cost is (....).")
+            print("-" * 30)
+        elif macarons == 3:
+            print("You chose raspberry macarons! The cost is (....).")
+            print("-" * 30)
+        else:
+            print("That's not an option! Try again.\n")
+    elif bakery_options == 4:
+        print("Our pastry of the day is randomized! Today it's (...) and the cost is (....).")
+        print("-" * 30)
+
+    my_list.append((name, bakery_options))
+
+while True:
+    name = input("Welcome to Yummy Fanata Bakery! \nPlease enter your name, or enter 'bye' to finish. ")
+
+    if name.lower() == "bye":
+        print("Come again soon!")
+        break
+
+    if name not in names:
+        names.append(name)
+        bakery_info()
+    else:
+        print("-" * 30)
+        print("Hello! We recongize you",name,"\n")
+        bakery_info()
+        
+
+
+# print("-" * 20) #adds the horizontal lines things
+    
+
+
+# (1) cookie (macademia, choclate)
+# (2) cinammon roll
+# (3) macarons (pistachio, lemon, raspberry)
+# (4) pastry of the day (from random list of flavors (7))
