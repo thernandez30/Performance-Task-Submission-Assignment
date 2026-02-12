@@ -68,3 +68,10 @@ while True:
 # (2) cinammon roll
 # (3) macarons (pistachio, lemon, raspberry)
 # (4) pastry of the day (from random list of flavors (7))
+
+
+my_list = ['Strawberry cheesecake slice', 'Lemon meringue tart slice', 'Apple strudel', 'Cherry baklava', 'Coconut cake slice', 'Vanilla custard donut', 'Key lime pie slice']
+
+random_element = random.choice(my_list)
+
+print(f"The randomly selected element is: {random_element}")
