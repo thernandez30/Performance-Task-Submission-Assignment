@@ -1,5 +1,4 @@
 import random
-
 # Empty list to store the user's name.
 names = []
 # Empty list to store user's name and order.
@@ -8,15 +7,8 @@ my_list = []
 def bakery_info(user_name):
     print(f"Hello, {user_name}! Welcome to Yummy Fanata Bakery!")
     bakery_options = int(input(
-        "What would you like to order today? Enter 1-4.\n"
-        "1.) 4 cookies\n"
-        "2.) 2 cinnamon rolls\n"
-        "3.) 4 Macarons\n"
-        "4.) 1 Pastry of the day\n"
-    ))
-
+        "What would you like to order today? Enter 1-4.\n1.) 4 cookies\n2.) 2 cinnamon rolls\n3.) 4 Macarons\n4.) 1 Pastry of the day\n"))
     # Selection to determine which menu item the user wants.
-    order_item = ""
     if bakery_options == 1:
         cookies = int(input("You chose cookies! Choose a flavor 1-2. \n1.) Macadamia nut \n2.) Chocolate chip\n"))
         if cookies == 1:
@@ -54,9 +46,8 @@ def bakery_info(user_name):
     else:
         print("That's not an option! Try again.")
         return
-
     print("-" * 30)
-    # Append user and their order to the main list
+    # Append user's name and their order to the main list.
     my_list.append((user_name, order_item))
 
 # Loop to ensure that the user can order multiple menu items.
@@ -64,20 +55,7 @@ while True:
     name = input("Please enter your name, or enter 'done' to finish: ")
     if name.lower() == 'done':
         # Final output of the user's name and menu item(s).
-        print(f"\nOkay, you're ready to go! Here is what was ordered:\n{my_list}")
-        break
-    
-    # Call function with user name
+        print(f"\nOkay, you're ready to go! Here is what you ordered:\n{my_list}")
+        break 
+    # Call function with the user's name.
     bakery_info(name)
-
-
-# print("-" * 20) #adds the horizontal line things
-
-
-
-
-
-# 4 cookies
-# 2 cinnamon rolls
-# 4 Macarons
-# 1 Pastry of the day
