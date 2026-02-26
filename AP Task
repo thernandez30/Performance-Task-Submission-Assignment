@@ -69,15 +69,3 @@ while True:
     
     # Call function with user name
     bakery_info(name)
-
-
-# print("-" * 20) #adds the horizontal line things
-
-
-
-
-
-# 4 cookies
-# 2 cinnamon rolls
-# 4 Macarons
-# 1 Pastry of the day
